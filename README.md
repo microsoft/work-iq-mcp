@@ -1,10 +1,10 @@
-# Microsoft WorkIQ (Public Preview)
+# Microsoft Work IQ (Public Preview)
 
 > Query your Microsoft 365 data with natural language — emails, meetings, documents, Teams messages, and more.
 
 [![npm version](https://img.shields.io/npm/v/@microsoft/workiq)](https://www.npmjs.com/package/@microsoft/workiq)
 
-WorkIQ is a CLI and an MCP (Model Context Protocol) server that connects AI assistants to your Microsoft 365 Copilot data. Ask questions like *"What did my manager say about the project deadline?"* or *"Find my recent documents about Q4 planning."*
+The WorkIQ CLI and MCP (Model Context Protocol) server connects AI assistants to your Microsoft 365 Copilot data. Ask questions like *"What did my manager say about the project deadline?"* or *"Find my recent documents about Q4 planning."*
 
 > ⚠️ **Public Preview:** Features and APIs may change.
 
