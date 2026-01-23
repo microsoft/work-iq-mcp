@@ -1,6 +1,6 @@
 # Work IQ - Tenant Administrator Enablement Guide
 
-This guide provides step-by-step instructions for Microsoft 365 tenant administrators to enable Work IQ for their organization. Work IQ is a CLI tool and Model Context Protocol (MCP) server that connects AI assistants to Microsoft 365 data, enabling natural language queries across emails, meetings, documents, Teams, and contacts.
+This guide provides step-by-step instructions for Microsoft 365 tenant administrators to enable Work IQ for their organization.
 
 ---
 
@@ -17,7 +17,7 @@ https://login.microsoftonline.com/{your-tenant-id}/adminconsent?client_id=ba0816
 2. Sign in with your admin account
 3. Click **Accept** to grant consent for your entire organization
 
-That's it! Users with Copilot licenses can now install and use Work IQ. See [User Installation and Setup](#step-5-user-installation-and-setup) for end-user instructions.
+That's it! Users with Copilot licenses can now install and use Work IQ. See the [Work IQ README](https://github.com/microsoft/work-iq-mcp/blob/main/README.md) for end-user installation instructions.
 
 ---
 
@@ -30,9 +30,8 @@ That's it! Users with Copilot licenses can now install and use Work IQ. See [Use
 5. [Step 2: Configure Microsoft 365 Copilot in Your Tenant](#step-2-configure-microsoft-365-copilot-in-your-tenant)
 6. [Step 3: Grant Admin Consent (Alternative Methods)](#step-3-grant-admin-consent-alternative-methods)
 7. [Step 4: Configure User Access](#step-4-configure-user-access)
-8. [Step 5: User Installation and Setup](#step-5-user-installation-and-setup)
-9. [Troubleshooting](#troubleshooting)
-10. [Security Considerations](#security-considerations)
+8. [Troubleshooting](#troubleshooting)
+9. [Security Considerations](#security-considerations)
 
 ---
 
@@ -40,27 +39,19 @@ That's it! Users with Copilot licenses can now install and use Work IQ. See [Use
 
 Work IQ uses the Microsoft 365 Copilot Chat API as its backend. This API requires specific delegated permissions that need administrative consent before users in your organization can use Work IQ.
 
-### What Work IQ Enables
-
-- Natural language queries across Microsoft 365 data
-- Access to emails, calendar, meetings, and documents
-- Teams chat and channel message search
-- People and contact information lookup
-- Integration with AI assistants via MCP protocol
-
 ### Required API Permissions
 
 Work IQ requires the following delegated permissions (all are required):
 
-| Permission | Description |
-|------------|-------------|
-| `Sites.Read.All` | Read items in all site collections |
-| `Mail.Read` | Read user mail |
-| `People.Read.All` | Read all users' relevant people lists |
-| `OnlineMeetingTranscript.Read.All` | Read all transcripts of online meetings |
-| `Chat.Read` | Read user chat messages |
-| `ChannelMessage.Read.All` | Read all channel messages |
-| `ExternalItem.Read.All` | Read external items |
+| Permission                           | Description                                  |
+|--------------------------------------|----------------------------------------------|
+| `Sites.Read.All`                     | Read items in all site collections           |
+| `Mail.Read`                          | Read user mail                               |
+| `People.Read.All`                    | Read all users' relevant people lists        |
+| `OnlineMeetingTranscript.Read.All`   | Read all transcripts of online meetings      |
+| `Chat.Read`                          | Read user chat messages                      |
+| `ChannelMessage.Read.All`            | Read all channel messages                    |
+| `ExternalItem.Read.All`              | Read external items                          |
 
 ---
 
@@ -273,89 +264,17 @@ For additional security, create a Conditional Access policy:
 
 ---
 
-## Step 5: User Installation and Setup
-
-Once admin consent is granted, share these instructions with your users.
-
-### 5.1 System Requirements
-
-Work IQ is supported on the following platforms:
-- Windows (x64, ARM64)
-- macOS (x64, ARM64)
-- Linux (x64, ARM64)
-
-**WSL Users:** If using Windows Subsystem for Linux, install the following packages for browser-based authentication:
-```bash
-sudo apt install xdg-utils wslu
-```
-
-### 5.2 Installation Options
-
-Users can install Work IQ using one of these methods:
-
-**Option A: NPM Global Installation**
-```bash
-npm install -g @microsoft/workiq
-workiq mcp
-```
-
-**Option B: Using npx (No Installation)**
-```bash
-npx -y @microsoft/workiq mcp
-```
-
-**Option C: VS Code Extension**
-- Use the one-click installer available for VS Code and VS Code Insiders
-
-### 5.3 First-Time Setup
-
-Users must complete these steps on first use:
-
-1. **Accept the EULA**
-   ```bash
-   workiq accept-eula
-   ```
-
-2. **Sign In**
-   - Run any Work IQ command
-   - A browser window will open for Microsoft authentication
-   - Sign in with their work account
-   - Complete MFA if prompted
-
-3. **Specify Tenant (If Multi-Tenant)**
-   ```bash
-   workiq ask -t YOUR_TENANT_ID "your question here"
-   ```
-
-### 5.4 IDE Configuration
-
-For MCP server integration, users add this to their IDE configuration:
-
-```json
-{
-  "mcpServers": {
-    "workiq": {
-      "command": "npx",
-      "args": ["-y", "@microsoft/workiq", "mcp"],
-      "tools": ["*"]
-    }
-  }
-}
-```
-
----
-
 ## Troubleshooting
 
 ### Common Issues and Solutions
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| "Admin approval required" prompt | Admin consent not granted | Use the Quick Start URL or Step 3 methods |
-| "Insufficient permissions" error | Missing API permissions | Verify all 7 required permissions are consented |
-| Users can't sign in | Conditional Access blocking | Review Conditional Access policies |
-| "License required" error | User lacks Copilot license | Assign Microsoft 365 Copilot license to user |
-| Features not appearing | License propagation delay | Wait up to 24 hours after license assignment |
+| Issue                                | Cause                        | Solution                                           |
+|--------------------------------------|------------------------------|----------------------------------------------------|
+| "Admin approval required" prompt     | Admin consent not granted    | Use the Quick Start URL or Step 3 methods          |
+| "Insufficient permissions" error     | Missing API permissions      | Verify all 7 required permissions are consented    |
+| Users can't sign in                  | Conditional Access blocking  | Review Conditional Access policies                 |
+| "License required" error             | User lacks Copilot license   | Assign Microsoft 365 Copilot license to user       |
+| Features not appearing               | License propagation delay    | Wait up to 24 hours after license assignment       |
 
 ### Verify Admin Consent Status
 
@@ -411,12 +330,12 @@ Work IQ provides access to sensitive organizational data including:
 
 ## Additional Resources
 
+- [Work IQ README & Installation Guide](https://github.com/microsoft/work-iq-mcp/blob/main/README.md)
 - [Microsoft 365 Copilot Documentation](https://learn.microsoft.com/microsoft-365-copilot/)
-- [Work IQ GitHub Repository](https://github.com/microsoft/work-iq-mcp)
 - [Microsoft Entra Admin Consent Documentation](https://learn.microsoft.com/entra/identity/enterprise-apps/grant-admin-consent)
 - [Microsoft Graph Permissions Reference](https://learn.microsoft.com/graph/permissions-reference)
 
 ---
 
-**Document Version:** 1.2
+**Document Version:** 1.3
 **Last Updated:** January 2026
