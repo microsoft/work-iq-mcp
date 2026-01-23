@@ -6,6 +6,8 @@
 
 The WorkIQ CLI and MCP (Model Context Protocol) server connects AI assistants to your Microsoft 365 Copilot data. Ask questions like *"What did my manager say about the project deadline?"* or *"Find my recent documents about Q4 planning."*
 
+To access Microsoft 365 tenant data, the WorkIQ CLI and MCP Server need to be consented to permissions that require administrative rights on the tenant. The WorkIQ client application will present a consent dialog on first access. If you are not a tenant administrator, you will need to contact them to provide access. This [User and Admin Consent Overview](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/user-admin-consent-overview) page provides more details about consenting applications access to M365 data.
+
 > ⚠️ **Public Preview:** Features and APIs may change.
 
 ---
@@ -19,7 +21,7 @@ The fastest way to get started is with GitHub Copilot CLI:
 copilot
 
 # 2. Add the plugins marketplace (one-time setup)
-/plugins marketplace add github/copilot-plugins
+/plugin marketplace add github/copilot-plugins
 
 # 3. Install WorkIQ
 /plugin install workiq@copilot-plugins
@@ -135,6 +137,15 @@ workiq mcp
 
 ---
 
+## Platform Support
+
+The WorkIQ CLI and MCP Server is supported on `win_x64`, `win_arm64`, `linux_x64`, `linux_arm64`, `osx_x64` and `osx_arm64`. It is also supported in WSL as long as WSL is able to launch a browser to enable sign-in. 
+
+One way to install browser support on WSL is with the following commands:
+```bash
+sudo apt install xdg-utils
+sudo apt install wslu
+```
 
 ## Contributing
 
