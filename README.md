@@ -148,7 +148,7 @@ We encourage the community to use this repo to:
 - Suggest features or product improvements
 - Share insights on developer experience or integration scenarios
 
-Please use GitHub Issues and Discussions to engage. While the runtime implementation is proprietary, community input here directly informs the product’s direction.
+Please use GitHub Issues to engage. While the runtime implementation is proprietary, community input here directly informs the product’s direction.
 
 ## 📄 License
 
