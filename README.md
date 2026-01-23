@@ -135,6 +135,25 @@ workiq mcp
 
 ---
 
+
+## Contributing
+
+The command-line tool and MCP server documented in this repository are **not open source**.  
+Their implementations are maintained internally, and source code contributions are not accepted.
+
+This repository is intentionally public to support **documentation, transparency, and feedback**.  
+We encourage the community to use this repo to:
+
+- Provide feedback on the documented behavior and APIs
+- Suggest features or product improvements
+- Share insights on developer experience or integration scenarios
+
+Please use GitHub Issues to engage. While the runtime implementation is proprietary, community input here directly informs the product’s direction.
+
 ## 📄 License
 
 By using this package, you accept the license agreement. See [NOTICES.TXT](https://github.com/microsoft/work-iq-mcp) and EULA within the package for legal terms.
+
+## Trademarks 
+
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
