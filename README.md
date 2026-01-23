@@ -142,6 +142,7 @@ workiq mcp
 The WorkIQ CLI and MCP Server is supported on `win_x64`, `win_arm64`, `linux_x64`, `linux_arm64`, `osx_x64` and `osx_arm64`. It is also supported in WSL as long as WSL is able to launch a browser to enable sign-in. 
 
 One way to install browser support on WSL is with the following commands:
+
 ```bash
 sudo apt install xdg-utils
 sudo apt install wslu
