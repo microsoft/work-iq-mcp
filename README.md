@@ -6,7 +6,11 @@
 
 The WorkIQ CLI and MCP (Model Context Protocol) server connects AI assistants to your Microsoft 365 Copilot data. Ask questions like *"What did my manager say about the project deadline?"* or *"Find my recent documents about Q4 planning."*
 
-To access Microsoft 365 tenant data, the WorkIQ CLI and MCP Server need to be consented to permissions that require administrative rights on the tenant. The WorkIQ client application will present a consent dialog on first access. If you are not a tenant administrator, you will need to contact them to provide access. This [User and Admin Consent Overview](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/user-admin-consent-overview) page provides more details about consenting applications access to M365 data.
+To access Microsoft 365 tenant data, the WorkIQ CLI and MCP Server need to be consented to permissions that require administrative rights on the tenant.On first access, a consent dialog appears. If you are not an administrator, contact your tenant administrator to grant access.
+
+**For Tenant Administrators:** See the [Tenant Administrator Enablement Guide](./ADMIN-INSTRUCTIONS.md) for detailed instructions on granting admin consent, including a quick one-click consent URL.
+
+For more information, see Microsoft's [User and Admin Consent Overview](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/user-admin-consent-overview).
 
 > ⚠️ **Public Preview:** Features and APIs may change.
 
