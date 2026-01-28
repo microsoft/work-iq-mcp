@@ -80,6 +80,8 @@ Or add it as an MCP server in your coding agent or IDE:
 }
 ```
 
+> Note: please refer to [use MCP servers in VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) for the configuration instructions relative to Visual Studio Code.
+
 ---
 
 ## 🎯 What You Can Query
