@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "com.microsoft/workiq",
+  "name": "io.github.microsoft/workiq",
   "title": "Microsoft Work IQ",
   "description": "Query Microsoft 365 Copilot for emails, meetings, documents, Teams messages, and people information.",
   "repository": {
