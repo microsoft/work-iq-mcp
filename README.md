@@ -16,6 +16,23 @@ For more information, see Microsoft's [User and Admin Consent Overview](https://
 
 ---
 
+## 📋 Prerequisites
+
+Before getting started, ensure you have **Node.js** (which includes NPM and NPX) installed:
+
+- **Node.js 18+** — [Download from nodejs.org](https://nodejs.org/)
+
+You can verify your installation by running:
+
+```bash
+node --version
+npm --version
+```
+
+> 💡 **Why Node.js?** WorkIQ uses NPX to run the MCP server. NPX is included automatically with NPM, which comes bundled with Node.js.
+
+---
+
 ## 🚀 Quick Start with GitHub Copilot CLI
 
 The fastest way to get started is with GitHub Copilot CLI:
