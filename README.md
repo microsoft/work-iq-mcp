@@ -2,6 +2,7 @@
 
 > Query your Microsoft 365 data with natural language — emails, meetings, documents, Teams messages, and more.
 
+[![AgentAudit Security](https://agentaudit.dev/api/badge/microsoft-work-iq-mcp)](https://agentaudit.dev/packages/microsoft-work-iq-mcp)
 [![npm version](https://img.shields.io/npm/v/@microsoft/workiq)](https://www.npmjs.com/package/@microsoft/workiq)
 
 The WorkIQ CLI and MCP (Model Context Protocol) server connects AI assistants to your Microsoft 365 Copilot data. Ask questions like *"What did my manager say about the project deadline?"* or *"Find my recent documents about Q4 planning."*
